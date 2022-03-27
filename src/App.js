@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { Header, Card } from 'components';
+import { useStore } from "store/context";
+import { getDataTodo } from "store/actions";
+import { Section, CardContainer } from 'containers';
 
 function App() {
+
+  const { state, dispatch } = useStore();
+
+  const fetchData = async () => {
+
+    const data = await getDataTodo();
+
+    dispatch({
+      type: "set_data_todo",
+      payload: data,
+    });
+
+  }
+
+  useEffect(() => {
+
+    fetchData();
+
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {state && (state.selected && Object.keys(state.selectedTodo).length > 0) &&
+        <Card type="big" data={state.selectedTodo} />
+      }
+      {state && (state.modify && Object.keys(state.selectedTodo).length > 0) &&
+        <Card type="modify" data={state.selectedTodo} />
+      }
+      {state && state.add &&
+        <Card type="modify" />
+      }
+      <Section title="Finished Task">
+        <CardContainer data={state && state.todoData} type="finished" />
+      </Section>
+      <Section title="Unfinished Task">
+        <CardContainer data={state && state.todoData} type="unfinished" />
+      </Section>
+    </>
   );
 }
 
