@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sirclo-lagu/static/css/main.71d1799f.css",
-    "main.js": "/sirclo-lagu/static/js/main.29205fda.js",
-    "index.html": "/sirclo-lagu/index.html",
-    "main.71d1799f.css.map": "/sirclo-lagu/static/css/main.71d1799f.css.map",
-    "main.29205fda.js.map": "/sirclo-lagu/static/js/main.29205fda.js.map"
+    "main.css": "/majoo-todo/static/css/main.71d1799f.css",
+    "main.js": "/majoo-todo/static/js/main.29205fda.js",
+    "index.html": "/majoo-todo/index.html",
+    "main.71d1799f.css.map": "/majoo-todo/static/css/main.71d1799f.css.map",
+    "main.29205fda.js.map": "/majoo-todo/static/js/main.29205fda.js.map"
   },
   "entrypoints": [
     "static/css/main.71d1799f.css",
