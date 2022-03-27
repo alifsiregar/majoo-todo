@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sirclo-lagu/static/css/main.71d1799f.css",
+    "main.js": "/sirclo-lagu/static/js/main.29205fda.js",
+    "index.html": "/sirclo-lagu/index.html",
+    "main.71d1799f.css.map": "/sirclo-lagu/static/css/main.71d1799f.css.map",
+    "main.29205fda.js.map": "/sirclo-lagu/static/js/main.29205fda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71d1799f.css",
+    "static/js/main.29205fda.js"
+  ]
+}
